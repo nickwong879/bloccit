@@ -1,6 +1,8 @@
 ## Bloccit: a Reddit clone to teach the fundamentals of web development and Rails 4.
 Made with my mentor at [Bloc](http://bloc.io).
 
+Heroku app:  [nickwong879-bloccit](https://git.heroku.com/nickwong879-bloccit.git)
+
 
 == README
 
