@@ -15,6 +15,12 @@ require 'faker'
 		body:   Faker::Lorem.paragraph
 		)
 end
+
+Post.create!(
+		title:  "This is a unique post",
+		body:  "This is a unique body content for my post"
+		)
+
 posts = Post.all
 
 # Create comments
@@ -24,6 +30,11 @@ posts = Post.all
 		body:  Faker::Lorem.paragraph
 		)
 end
+
+Comment.create!(
+		post:  post.last,
+		body:  "This is a unique comment for my post"
+		)
 
 puts "Seed finished"
 puts "#{Post.count} posts created"
