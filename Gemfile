@@ -61,5 +61,7 @@ group :development, :test do
   # Faker gem added for seed module
   gem 'faker'
 
+  # Figaro gem added for environmental variables handling
+  gem 'figaro', '1.0'
 end
 
