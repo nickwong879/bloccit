@@ -4,6 +4,10 @@ source 'https://rubygems.org'
 #Adding the gem for Bootstrap CSS
 gem 'bootstrap-sass'
 
+# Installed Devise authentication gem
+gem 'devise'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Updated the gemfile for production v development
@@ -54,9 +58,6 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-
-  # Installed Devise authentication gem
-  gem 'devise'
 
   # Faker gem added for seed module
   gem 'faker'
