@@ -7,6 +7,11 @@ gem 'bootstrap-sass'
 # Installed Devise authentication gem
 gem 'devise'
 
+# Faker gem added for seed module
+gem 'faker'
+
+# Pundit gem added for Authorisation checkpoint
+gem 'pundit'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -58,9 +63,6 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-
-  # Faker gem added for seed module
-  gem 'faker'
 
   # Figaro gem added for environmental variables handling
   gem 'figaro', '1.0'
