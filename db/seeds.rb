@@ -29,13 +29,21 @@ users = User.all
 end
 topics = Topic.all
 
+#Create Summaries
+50.times do
+	Summary.create!(
+		name: Faker::Lorem.sentence 
+#		description:  Faker::Lorem.paragraph
+		)
+end
+summaries = Summary.all
 
 # Create posts
 50.times do
 	Post.create!(
 		user:   users.sample,
-		topic:  topics.sample, 
-		summary:  summary.sample,
+		topic:  topics.sample,
+#		summary: summaries.sample,
 		title:  Faker::Lorem.sentence,
 		body:   Faker::Lorem.paragraph
 		)
@@ -81,6 +89,7 @@ member = User.new(
 	member.save!
 
 puts "Seed finished"
+puts "#{Summary.count} summaries created"
 puts "#{User.count} users created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
