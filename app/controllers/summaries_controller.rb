@@ -10,6 +10,7 @@ class SummariesController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
   	@summary = Summary.find(params[:id])
   	@posts = @summary.post
   	authorize @summary

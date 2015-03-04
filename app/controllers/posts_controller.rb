@@ -7,19 +7,19 @@ class PostsController < ApplicationController
   def show
   	@post = Post.find(params[:id])
     @topic = Topic.find(params[:topic_id])
-    @summary = Summary.find(params[:post_id])
+    @summary = Summary.find(params[:id])
   end
 
   def new
     @topic = Topic.find(params[:topic_id])
-    @summary = Summary.find(params[:post_id])
+    @summary = Summary.find(params[:id])
     @post = Post.new
     authorize @post
   end
 
   def create
     @topic = Topic.find(params[:topic_id])
-    @summary = Summary.find(params[:post_id])
+    @summary = Summary.find(params[:id])
     @post = current_user.posts.build(post_params)
     authorize @post
     if @post.save
@@ -33,14 +33,14 @@ class PostsController < ApplicationController
 
   def edit
       @topic = Topic.find(params[:topic_id])
-      @summary = Summary.find(params[:post_id])
+      @summary = Summary.find(params[:id])
       @post = Post.find(params[:id])
       authorize @post
   end
 
   def update
       @topic = Topic.find(params[:topic_id])
-      @summary = Summary.find(params[:post_id])
+      @summary = Summary.find(params[:id])
       @post = Post.find(params[:id])
       authorize @post
       if @post.update_attributes(post_params)
