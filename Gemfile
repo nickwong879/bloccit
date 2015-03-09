@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Adding the redcarpet gem for markdown
+gem 'redcarpet'
 
 #Adding the gem for Bootstrap CSS
 gem 'bootstrap-sass'
