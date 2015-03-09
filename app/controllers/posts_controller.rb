@@ -12,14 +12,12 @@ class PostsController < ApplicationController
 
   def new
     @topic = Topic.find(params[:topic_id])
-    @summary = Summary.find(params[:id])
     @post = Post.new
     authorize @post
   end
 
   def create
     @topic = Topic.find(params[:topic_id])
-    @summary = Summary.find(params[:id])
     @post = current_user.posts.build(post_params)
     authorize @post
     if @post.save
