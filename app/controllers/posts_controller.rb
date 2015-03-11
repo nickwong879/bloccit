@@ -9,6 +9,11 @@ class PostsController < ApplicationController
     @topic = Topic.find(params[:topic_id])
   end
 
+  def markdown_title
+    render_as_markdown(markdown)
+  end
+
+
   def new
     @topic = Topic.find(params[:topic_id])
     @post = Post.new

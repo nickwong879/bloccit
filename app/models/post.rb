@@ -10,6 +10,23 @@ class Post < ActiveRecord::Base
 	validates :body, length: { minimum: 20 }, presence: true
 	validates :user, presence: true
 
+def markdown_title
+	render_as_markdown(title)
+end
+
+def markdown_body
+	render_as_markdown(body)
+end
+
+
+private
+
+def render_as_markdown(markdown)
+    renderer = Redcarpet::Render::HTML.new
+    extensions = {fenced_code_blocks: true}
+    redcarpet = Redcarpet::Markdown.new(renderer, extensions)
+    (redcarpet.render markdown).html_safe
+end
 
 	#scope :ordered_by_title, -> { order('title DESC')}
 	#scope :ordered_by_reverse_created_at, -> { order('created_at ASC')}
