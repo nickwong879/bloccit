@@ -1,5 +1,14 @@
 source 'https://rubygems.org'
 
+# Adding gemfile 'fog'  
+gem 'fog'
+
+# Adding carrierwave
+gem 'carrierwave'
+
+# Adding 'mini-magick'
+gem 'mini_magick'
+
 # Adding the redcarpet gem for markdown
 gem 'redcarpet'
 
