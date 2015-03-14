@@ -6,6 +6,9 @@ gem 'fog'
 # Adding carrierwave
 gem 'carrierwave'
 
+# Adding cloudinary
+gem 'cloudinary'
+
 # Adding 'mini-magick'
 gem 'mini_magick'
 
