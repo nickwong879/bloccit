@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Adding pagination gem
+gem 'will_paginate', '~> 3.0.5'
+
 # Adding gemfile 'fog'  
 gem 'fog'
 
