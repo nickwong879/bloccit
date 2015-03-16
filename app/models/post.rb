@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+
 	has_many :comments
 	has_one :summary
 	belongs_to :user
@@ -12,6 +13,8 @@ class Post < ActiveRecord::Base
 	validates :body, length: { minimum: 20 }, presence: true
 	validates :user, presence: true
 
+
+
 def markdown_title
 	render_as_markdown(title)
 end
@@ -19,7 +22,6 @@ end
 def markdown_body
 	render_as_markdown(body)
 end
-
 
 private
 

@@ -15,7 +15,7 @@
 				</h4>
 			<large>
 				<%= image_tag(post.image.url) if post.image? %>
-			</large>
+			</large></br>
 				<small>
 					<%= image_tag(post.user.avatar.tiny.url) if post.user.avatar? %>
 					submitted <%= time_ago_in_words(post.created_at) %> ago by
@@ -25,6 +25,7 @@
 			</div>
 		</div>
 		<% end %>
+					<%= will_paginate @posts %>
 	</div>
 	<div class="col-md-4">
 		<% if policy(Post.new).create? %>
