@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     @comment = Comment.new
     @comments = @post.comments
     @user = current_user
-    authorize @comment
+    #authorize @comment
   end
 
   def new

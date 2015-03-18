@@ -5,7 +5,7 @@ def create
 	@post = @topic.posts.find(params[:post_id])
 	@comments = @post.comments
     authorize @comment
-    @comment.user = admin_user
+    @comment.user = current_user
 
     if @comment.save
       flash[:notice] = "Comment was saved."
