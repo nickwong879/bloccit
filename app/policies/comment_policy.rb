@@ -1,5 +1,9 @@
 class CommentPolicy < ApplicationPolicy
 
+	def destroy?
+		user.present? && (record.user == user || user.admin? || user.moderator?)
+	end	
+
 	def new?
 		create?
 	end
@@ -7,9 +11,7 @@ class CommentPolicy < ApplicationPolicy
 	def create?
 		user.present? && (record.user == user || user.admin?)
 	end
-	
-	def show?
-	false
-	end
+
+
 
 end

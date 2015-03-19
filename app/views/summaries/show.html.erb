@@ -7,7 +7,7 @@
 <div class="row">
 	<div class="col-md-8">
 		<p class="lead"><%= @summary.name %></p>
-		<%= link_to @post.title %>
+		<%= link_to @post.title, topic_post_path([:topic_id :id])%>
 			<div class="media">
 			<div class="media-body">
 					<%= @summary.description %>
@@ -20,7 +20,7 @@
 	</div>
 	<div class="col-md-4">
 		<% if policy(Post.new).create? %>
-		<%= link_to "New Post", new_topic_post_path(@topic), class: 'btn btn-success' %>
+		<%= link_to "New Post", new_topic_post_path([:topic_id]), class: 'btn btn-success' %>
 		<% end %>
 	</div>
 </div>
