@@ -72,6 +72,10 @@ end
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+
+  # RSpec module
+  gem 'rspec-rails'
+  
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -84,4 +88,5 @@ group :development, :test do
   # Figaro gem added for environmental variables handling
   gem 'figaro', '1.0'
 end
+
 
