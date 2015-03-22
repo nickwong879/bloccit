@@ -9,13 +9,15 @@
 		<p class="lead"><%= @topic.description %></p>
 		<% @posts.each do |post| %>
 		<div class="media">
+			<%= render partial: 'votes/voter', locals: { post: post } %>
+
 			<div class="media-body">
 				<h4 class="media-heading">
 					<%= link_to (post.markdown_title), [@topic, post] %>
 				</h4>
 			<large>
 				<%= image_tag(post.image.url) if post.image? %>
-			</large></br>
+			</large>
 				<small>
 					<%= image_tag(post.user.avatar.tiny.url) if post.user.avatar? %>
 					submitted <%= time_ago_in_words(post.created_at) %> ago by
