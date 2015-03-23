@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   resources :users, only: [:update]
     resources :summaries
   resources :topics do
-    resources :posts, except:[:index] 
+    resources :posts, except: [:index] 
     end
 
     resources :posts, only: [] do
