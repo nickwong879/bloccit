@@ -87,6 +87,11 @@ group :development, :test do
 
   # Figaro gem added for environmental variables handling
   gem 'figaro', '1.0'
+
+  # Installing Capybara for the Interlude checkpoint
+  gem 'capybara'
+
+
 end
 
 
