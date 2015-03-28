@@ -1,14 +1,9 @@
 class Topic < ActiveRecord::Base
 
-	has_many :posts, dependent: :destroy
+	has_many :posts, dependent: :destroy	
 
-	
-	validates :name, length: { minimum: 5 }, presence: true
-
-#def paginate(items={})
-
-#	limit(items[:page]).offset(items[:per_page] * 10)
-
-#end
+	scope :visible_to, -> (user) { user ? all : :publicly_viewable }
+	scope :publicly_viewable, -> { where(public: true) }
+	scope :privately_viewable, -> { where(public: false) }
 
 end
