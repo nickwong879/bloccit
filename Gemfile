@@ -36,10 +36,18 @@ gem 'pundit'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Updated the gemfile for production v development
+
+
+# Changing web server
+gem 'puma', group: :production
+gem 'thin', group: :development
+
 group :production do
 	gem 'pg'
 	gem 'rails_12factor'
 end
+
+
 
 group :development do
 	gem 'sqlite3'
