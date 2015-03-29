@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# adding NewRelic for monitoring
+gem 'newrelic_rpm'
+
 # Adding pagination gem
 gem 'will_paginate', '~> 3.0.5'
 

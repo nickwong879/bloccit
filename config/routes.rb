@@ -16,10 +16,12 @@ Rails.application.routes.draw do
   get 'topics/edit'
 
   devise_for :users
-  resources :users, only: [:update, :show]
+  resources :users, only: [:update, :show, :index]
+
     resources :summaries
+  
   resources :topics do
-    resources :posts, except: [:index] 
+    resources :posts, except: [:index] , controller: 'topics/posts'
     end
 
     resources :posts, only: [:index] do
