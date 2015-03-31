@@ -6,7 +6,7 @@
 		<small>
 		<p><%= comment[:body] %>
 			<% if policy(comment).destroy? %>
-			| <%= link_to "Delete", [comment.post, comment], method: :delete %></p>
+			| <%= link_to "Delete", [comment.post, comment], method: :delete, remote: true %></p>
 		<p>Created by <%= comment.user[:name] %> </p>
 
 		<% end %>
