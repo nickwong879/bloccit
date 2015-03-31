@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# add factory_girl
+gem 'factory_girl_rails', '~>4.0'
+
 # adding NewRelic for monitoring
 gem 'newrelic_rpm'
 
