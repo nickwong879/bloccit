@@ -40,16 +40,20 @@
 <div class="row">
 	<div class="col-md-8">
 			<h4>Comments:</h4>
+			<div class='js-comments'>
 			<% @post.comments.each do |comment| %>
 			<%= render partial: 'comments/comment', collection: @comments %>
 			<% end %>
+			</div>
 	</div>
 </div>
 
-<% if policy(@comment).create? %>
-<h4>Add a new comment</h4>
-<%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @comment} %>
-<% end %>
+			<% if policy(@comment).create? %>
+			<h4>Add a new comment</h4>
+			<div class='new-comment'>
+			<%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @comment} %>
+			</div>
+			<% end %>
 
 <br/>
 
